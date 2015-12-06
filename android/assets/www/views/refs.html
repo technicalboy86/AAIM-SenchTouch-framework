@@ -1,0 +1,26 @@
+<div data-options="dxView : { name: 'refs', title: '',  } " >
+    <div data-bind="dxCommand: { title: 'Main', action: goMain, icon: 'edit', id: 'save', visible: 1, type: 'default' }" ></div>
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+    	<div class="page-header">
+    		<div class="left-area">
+    			<img src="assets/images/inside/quickref_wht.png" />
+    		</div>
+    		<div class="right-area">
+    			<span>QUICK REFERENCE</span>
+    		</div>
+    	</div>    
+        <div data-bind="dxList: { dataSource: refslist_data, pullRefreshEnabled: true }">
+            <div data-options="dxTemplate : { name: 'item' } " data-bind="dxAction: '#refdetail/{reference_id}'" class="nl-list-item" >
+                <img class="ref-icon" src="assets/images/inside/quickref_green.png" />
+                <div class="ref-info">
+	                <div class="ref-name">
+	                	<span data-bind="text: $data. reference_title"></span>
+	                </div>
+	                <div class="ref-data">
+		                <p data-bind="text: $data.reference_description"></p>
+					</div>
+				</div>
+            </div>
+        </div>       
+    </div>
+</div>

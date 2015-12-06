@@ -1,0 +1,46 @@
+<div data-options="dxView : { name: 'contactdetail', title: '',  } " >
+    <div data-bind="dxCommand: { title: 'Main', action: goMain, icon: 'edit', id: 'save', visible: 1, type: 'default' }" ></div>
+    <div class="contact_detail_view" data-options="dxContent : { targetPlaceholder: 'content' } " >
+    	<div data-bind="dxScrollView: { }">
+	    	<div class="page-header">
+	    		<div class="left-area">
+	    			<img src="assets/images/inside/contacts-wht.png" />
+	    		</div>
+	    		<div class="right-area">
+	    			<span>CONTACT</span>
+	    		</div>
+	    	</div>      	 
+    	
+	        <div class="dx-fieldset nl-fieldset">
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">Name:</div>
+	                <div class="dx-field-value" data-bind="text: contact_name"></div>
+	            </div>
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">Title:</div>
+	                <div class="dx-field-value" data-bind="text: contact_title"></div>
+	            </div>
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">Company:</div>
+	                <div class="dx-field-value" data-bind="text: contact_company"></div>
+	            </div>
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">Phone:</div>
+	                <div class="dx-field-value" data-bind="text: contact_phone"></div>
+	            </div>
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">Mobile:</div>
+	                <div class="dx-field-value" data-bind="text: contact_mobile"></div>
+	            </div>
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">Fax:</div>
+	                <div class="dx-field-value" data-bind="text: contact_fax"></div>
+	            </div>
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">Notes:</div>
+	                <div class="dx-field-value wrap" data-bind="text: contact_notes"></div>
+	            </div>
+			</div>
+		</div>
+    </div>
+</div>

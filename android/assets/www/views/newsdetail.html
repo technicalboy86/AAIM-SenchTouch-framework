@@ -1,0 +1,30 @@
+<div data-options="dxView : { name: 'newsdetail', title: '',  } " >
+    <div data-bind="dxCommand: { title: 'Main', action: goMain, icon: 'edit', id: 'save', visible: 1, type: 'default' }" ></div>
+    <div class="news_detail_view" data-options="dxContent : { targetPlaceholder: 'content' } " >
+    	<div data-bind="dxScrollView: { }">
+	    	<div class="page-header">
+	    		<div class="left-area">
+	    			<img src="assets/images/inside/news_wht.png" />
+	    		</div>
+	    		<div class="right-area">
+	    			<span>Bulletin</span>
+	    		</div>
+	    	</div>    
+	        <div class="dx-fieldset nl-fieldset">
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">Subject:</div>
+	                <div class="dx-field-value" data-bind="text: news_title"></div>
+	            </div>
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">Active:</div>
+	                <div class="dx-field-value" data-bind="text: active_on"></div>
+	            </div>
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">Detail:</div>
+	                <div class="dx-field-value" data-bind="text: news_content"></div>
+	            </div>
+	            <img data-bind="attr:{src:'http://localhost/aaim/uploads/news_attached/'+file_attach()}" />
+			</div>
+		</div>
+    </div>
+</div>

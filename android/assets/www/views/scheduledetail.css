@@ -1,0 +1,13 @@
+﻿.schedule_detail_view .dx-field-value{
+	white-space: normal !important;
+	text-align: left !important;
+	width: 72% !important;
+}
+.schedule_detail_view  .dx-fieldset .dx-field-label{
+	width: 28% !important;
+}
+
+.dx-field-value.wrap {
+	white-space: normal !important;
+	text-align: left !important;
+}

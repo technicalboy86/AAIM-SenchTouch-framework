@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AAIM</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- Framework -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script type="text/javascript" src="assets/js/jquery-2.0.3.min.js"></script>
+    <!--<![endif]-->
+    <script type="text/javascript" src="assets/js/knockout-3.0.0.js"></script>
+    <script type="text/javascript" src="assets/js/globalize.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="assets/js/dx.phonejs.js"></script>
+    <script type="text/javascript" src="js/push.js"></script>
+    
+    <script type="text/javascript" src="assets/js/constants.js"></script>
+    <script type="text/javascript" src="assets/js/common.js"></script>
+    <script type="text/javascript" src="assets/js/datastores.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/dx.common.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/dx.ios.default.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/dx.android.holo-dark.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/dx.win8.black.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/dx.tizen.white.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/dx.generic.light.css" />
+
+    <!-- App -->
+    <script type="text/javascript" src="app.config.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="app.css" />
+
+    <!-- Layouts -->
+    <link rel="stylesheet" type="text/css" href="layouts/SlideOut/SlideOutLayout.css" />
+    <link rel="dx-template" type="text/html" href="layouts/SlideOut/SlideOutLayout.html" />
+    <script type="text/javascript" src="layouts/SlideOut/SlideOutLayout.js"></script>
+    <link rel="stylesheet" type="text/css" href="layouts/Empty/EmptyLayout.css" />
+    <link rel="dx-template" type="text/html" href="layouts/Empty/EmptyLayout.html" />
+    <script type="text/javascript" src="layouts/Empty/EmptyLayout.js"></script>
+
+    <!-- Views -->
+    <script type="text/javascript" src="views/Login.js"></script>
+	<link rel="dx-template" type="text/html" href="views/Login.html"/>
+    <link rel="stylesheet" type="text/css" href="views/Login.css" />    
+    
+    <script type="text/javascript" src="views/Home.js"></script>
+	<link rel="dx-template" type="text/html" href="views/Home.html"/>
+    <link rel="stylesheet" type="text/css" href="views/Home.css" />
+    
+    <script type="text/javascript" src="views/contacts.js"></script>
+	<link rel="dx-template" type="text/html" href="views/contacts.html"/>
+    <link rel="stylesheet" type="text/css" href="views/contacts.css" />
+    <script type="text/javascript" src="views/contactdetail.js"></script>
+	<link rel="dx-template" type="text/html" href="views/contactdetail.html"/>
+    <link rel="stylesheet" type="text/css" href="views/contactdetail.css" />
+    
+    <script type="text/javascript" src="views/notifications.js"></script>
+	<link rel="dx-template" type="text/html" href="views/notifications.html"/>
+    <link rel="stylesheet" type="text/css" href="views/notifications.css" />    
+    
+    <script type="text/javascript" src="views/notificationdetail.js"></script>
+	<link rel="dx-template" type="text/html" href="views/notificationdetail.html"/>
+    <link rel="stylesheet" type="text/css" href="views/notificationdetail.css" />    
+    
+    <script type="text/javascript" src="views/livemeeting.js"></script>
+	<link rel="dx-template" type="text/html" href="views/livemeeting.html"/>
+    <link rel="stylesheet" type="text/css" href="views/livemeeting.css" />    
+    
+    <script type="text/javascript" src="views/news.js"></script>
+	<link rel="dx-template" type="text/html" href="views/news.html"/>
+    <link rel="stylesheet" type="text/css" href="views/news.css" />  
+    
+    <script type="text/javascript" src="views/newsdetail.js"></script>
+	<link rel="dx-template" type="text/html" href="views/newsdetail.html"/>
+    <link rel="stylesheet" type="text/css" href="views/newsdetail.css" />      
+      
+    <script type="text/javascript" src="views/refs.js"></script>
+	<link rel="dx-template" type="text/html" href="views/refs.html"/>
+    <link rel="stylesheet" type="text/css" href="views/refs.css" />    
+    
+    <script type="text/javascript" src="views/refdetail.js"></script>
+	<link rel="dx-template" type="text/html" href="views/refdetail.html"/>
+    <link rel="stylesheet" type="text/css" href="views/refdetail.css" />    
+    
+    <script type="text/javascript" src="views/schedule.js"></script>
+	<link rel="dx-template" type="text/html" href="views/schedule.html"/>
+    <link rel="stylesheet" type="text/css" href="views/schedule.css" />
+    
+    <script type="text/javascript" src="views/scheduledetail.js"></script>
+	<link rel="dx-template" type="text/html" href="views/scheduledetail.html"/>
+    <link rel="stylesheet" type="text/css" href="views/scheduledetail.css" />
+</head>
+<body>
+    <div class="dx-viewport"></div>
+
+    <script type="text/javascript">
+    	function onOffline(){
+    		//DevExpress.ui.notify("You are in internet disconnection mode, please try again when you're in connection.", currentType, 900000);
+    		DevExpress.ui.dialog.alert("You are in internet disconnection mode, please try again when you're in connection.", "Warning");
+    	}
+    
+    	function onOnline(){
+    	}
+        $(function() {
+            document.addEventListener("online", onOnline, false);
+            document.addEventListener("offline", onOffline, false);        
+            AAIM.app.navigate();
+        });
+    </script>
+</body>
+</html>
+

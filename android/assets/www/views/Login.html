@@ -1,0 +1,19 @@
+<div data-options="dxView : { name: 'Login', title: 'AAIM' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+		<div data-bind="dxScrollView: { }">
+        	<div class="dx-fieldset login-margintop">
+                <div class="dx-field">
+					<div class="dx-field-label" style="width:20%">Email:</div>    
+					<div class="dx-field-value" style="width:80%"  data-bind=" dxTextBox: { value: email, placeholder: 'Please Input...' }"></div>  
+				</div>
+                <div class="dx-field">
+					<center>
+						<div data-bind="dxButton: { text: ' LOG IN ', clickAction: login }"></div>
+					</center>						
+				</div>
+			</div>
+            <div id="toastContainerSuccess" data-bind="dxToast:{message:'Saved successfully.', type:'success', displayTime: 3000 }"></div>
+            <div id="toastContainerAlert" data-bind="dxToast:{message:'', type:'error', displayTime: 3000 }"></div>
+		</div>
+    </div>
+</div>

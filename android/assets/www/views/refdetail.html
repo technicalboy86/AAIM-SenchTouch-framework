@@ -1,0 +1,34 @@
+<div data-options="dxView : { name: 'refdetail', title: '',  } " >
+    <div data-bind="dxCommand: { title: 'Main', action: goMain, icon: 'edit', id: 'save', visible: 1, type: 'default' }" ></div>
+    <div class="ref_detail_view" data-options="dxContent : { targetPlaceholder: 'content' } " >
+    	<div data-bind="dxScrollView: { }">
+	    	<div class="page-header">
+	    		<div class="left-area">
+	    			<img src="assets/images/inside/quickref_wht.png" />
+	    		</div>
+	    		<div class="right-area">
+	    			<span>Quick Reference</span>
+	    		</div>
+	    	</div>    
+	        <div class="dx-fieldset nl-fieldset">
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">Title:</div>
+	                <div class="dx-field-value" data-bind="text: reference_title"></div>
+	            </div>
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">Description:</div>
+	                <div class="dx-field-value wrap" data-bind="text: reference_description"></div>
+	            </div>
+	            <!-- 
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">URL:</div>
+	                <div class="dx-field-value" data-bind="text: url_link"></div>
+	            </div-->
+	            
+                <!-- ko ifnot:url_link() == '' -->
+                <center><div data-bind="dxButton: { text: ' Visit Reference URL ', clickAction: goURL }"></div></center>
+                <!-- /ko -->	            
+			</div>
+		</div>
+    </div>
+</div>

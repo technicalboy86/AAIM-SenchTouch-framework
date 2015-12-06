@@ -1,0 +1,34 @@
+<div data-options="dxView : { name: 'schedule', title: '',  } " >
+    <div data-bind="dxCommand: { title: 'Main', action: goMain, icon: 'edit', id: 'save', visible: 1, type: 'default' }" ></div>
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+    	<div class="page-header">
+    		<div class="left-area">
+    			<img src="assets/images/inside/schedule_wht.png" />
+    		</div>
+    		<div class="right-area">
+    			<span>SCHEDULE</span>
+    		</div>
+    	</div>      
+        <div data-bind="dxList: { dataSource: schedulelist_data, pullRefreshEnabled: true }">
+            <div data-options="dxTemplate : { name: 'item' } " data-bind="dxAction: '#scheduledetail/{calendar_id}'" class="nl-list-item" >
+                <div class="contact-info">
+	                <div class="contact-name">
+	                	<span data-bind="text: $data.event_name"></span>
+	                </div>
+	                <div class="contact-data">
+		                <div class="row">
+		                	<span data-bind="text: $data.event_location	"></span>
+		                </div>
+		                <div class="row">
+		                	<span data-bind="text: $data.event_date"></span>
+		                </div>
+		                <div class="row">
+		                	<span data-bind="text: $data.event_time"></span>
+		                </div>
+					</div>
+				</div>
+            </div>
+        </div> 
+        
+    </div>
+</div>

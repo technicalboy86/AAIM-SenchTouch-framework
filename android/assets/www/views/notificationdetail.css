@@ -1,0 +1,8 @@
+﻿.notification_detail_view .dx-field-value{
+	white-space: normal !important;
+	text-align: left !important;
+	width: 80% !important;
+}
+.notification_detail_view  .dx-fieldset .dx-field-label{
+	width: 20% !important;
+}

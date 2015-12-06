@@ -1,0 +1,27 @@
+<div data-options="dxView : { name: 'news', title: '',  } " >
+    <div data-bind="dxCommand: { title: 'Main', action: goMain, icon: 'edit', id: 'save', visible: 1, type: 'default' }" ></div>
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+    	<div class="page-header">
+    		<div class="left-area">
+    			<img src="assets/images/inside/news_wht.png" />
+    		</div>
+    		<div class="right-area">
+    			<span>Bulletin</span>
+    		</div>
+    	</div>
+        <div data-bind="dxList: { dataSource: newslist_data, pullRefreshEnabled: true }">
+            <div data-options="dxTemplate : { name: 'item' } " data-bind="dxAction: '#newsdetail/{news_id}'" class="nl-list-item" >
+                <img class="news-icon" src="assets/images/inside/news_green.png" />
+                <div class="news-info">
+	                <div class="news-name">
+	                	<span style="display:inline-block;width:65%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis" data-bind="text: $data.news_title"></span>
+	                	<span style="display:inline-block;width:20%;font-size:14px;"  data-bind="text: $data.active_on"></span>
+	                </div>
+	                <div class="news-data">
+		                <p data-bind="text: $data.news_content"></p>
+					</div>
+				</div>
+            </div>
+        </div>       
+    </div>
+</div>

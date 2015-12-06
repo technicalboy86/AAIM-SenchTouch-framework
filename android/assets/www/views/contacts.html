@@ -1,0 +1,44 @@
+<div data-options="dxView : { name: 'contacts', title: '',  } " >
+    <div data-bind="dxCommand: { title: 'Main', action: goMain, icon: 'edit', id: 'save', visible: 1, type: 'default' }" ></div>
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+    	<div class="page-header">
+    		<div class="left-area">
+    			<img src="assets/images/inside/contacts-wht.png" />
+    		</div>
+    		<div class="right-area">
+    			<span>CONTACTS</span>
+    		</div>
+    	</div>
+        <div data-bind="dxList: { dataSource: contactslist_data, pullRefreshEnabled: true, height:setHeight }">
+            <div data-options="dxTemplate : { name: 'item' } " data-bind="dxAction: '#contactdetail/{contact_id}'" class="nl-list-item" >
+                <img class="contact-icon" src="assets/images/inside/contacts_green.png" />
+                <div class="contact-info">
+	                <div class="contact-name">
+	                	<span data-bind="text: $data.contact_title"></span>
+	                </div>
+	                <div class="contact-data">
+		                <div class="row">
+		                	P - <span data-bind="text: $data.contact_phone"></span>
+		                </div>
+		                <div class="row">
+		                	F - <span data-bind="text: $data.contact_fax"></span>
+		                </div>
+		                <div class="row">
+		                	M - <span data-bind="text: $data.contact_mobile"></span>
+		                </div>
+		                <div class="row" data-bind="text: $data.admin_email"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+            </div>
+        </div> 
+    	<div class="page-header">
+    		<div class="left-area">
+    			<img src="assets/images/inside/contacts-wht.png" />
+    		</div>
+    		<div class="right-area">
+    			<span>CONTACTS</span>
+    		</div>
+    	</div>    
+    </div>
+</div>

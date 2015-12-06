@@ -1,0 +1,39 @@
+<div data-options="dxView : { name: 'scheduledetail', title: '',  } " >
+    <div data-bind="dxCommand: { title: 'Main', action: goMain, icon: 'edit', id: 'save', visible: 1, type: 'default' }" ></div>
+    <div class="schedule_detail_view" data-options="dxContent : { targetPlaceholder: 'content' } " >
+    	<div data-bind="dxScrollView: { }">
+	    	<div class="page-header">
+	    		<div class="left-area">
+	    			<img src="assets/images/inside/schedule_wht.png" />
+	    		</div>
+	    		<div class="right-area">
+	    			<span>SCHEDULE</span>
+	    		</div>
+	    	</div>      	 
+    	
+	        <div class="dx-fieldset nl-fieldset">
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">Name:</div>
+	                <div class="dx-field-value" data-bind="text: event_name"></div>
+	            </div>
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">Location:</div>
+	                <div class="dx-field-value" data-bind="text: event_location"></div>
+	            </div>
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">Date:</div>
+	                <div class="dx-field-value" data-bind="text: event_date"></div>
+	            </div>
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">Time:</div>
+	                <div class="dx-field-value" data-bind="text: event_time"></div>
+	            </div>
+	        	<div class="dx-field">
+	            	<div class="dx-field-label">Detail:</div>
+	                <div class="dx-field-value" data-bind="text: event_detail"></div>
+	            </div>
+	            </div>
+			</div>
+		</div>
+    </div>
+</div>

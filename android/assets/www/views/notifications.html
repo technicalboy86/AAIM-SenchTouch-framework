@@ -1,0 +1,26 @@
+<div data-options="dxView : { name: 'notifications', title: '',  } " >
+    <div data-bind="dxCommand: { title: 'Main', action: goMain, icon: 'edit', id: 'save', visible: 1, type: 'default' }" ></div>
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+    	<div class="page-header">
+    		<div class="left-area">
+    			<img src="assets/images/inside/notifications_wht.png" />
+    		</div>
+    		<div class="right-area">
+    			<span>NOTIFICATIONS</span>
+    		</div>
+    	</div>    
+        <div data-bind="dxList: { dataSource: notificationslist_data, pullRefreshEnabled: true }">
+            <div data-options="dxTemplate : { name: 'item' } " data-bind="dxAction: '#notificationdetail/{notification_id}'" class="nl-list-item" >
+                <img class="notification-icon" src="assets/images/inside/notifications_green.png" />
+                <div class="notification-info">
+	                <div class="notification-name">
+	                	<span data-bind="text: $data. notification_title"></span>
+	                </div>
+	                <div class="notification-data">
+		                <p data-bind="text: $data.notification_description"></p>
+					</div>
+				</div>
+            </div>
+        </div>       
+    </div>
+</div>

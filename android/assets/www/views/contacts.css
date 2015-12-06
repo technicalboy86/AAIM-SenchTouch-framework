@@ -1,0 +1,23 @@
+﻿.contact-icon{
+	float: left;
+	margin-top: 10px;
+	width: 15%;
+	display: block;
+}
+.contact-info{
+	float: left;
+	width: 80%;
+	margin-left: 5%;
+}
+.contact-name{
+	color: red;
+	font-size: 20px;
+	font-weight: bold;
+	border-bottom: 1px solid red;
+}
+.contact-data .row{
+	margin: 5px;
+	font-size: 16px;
+	text-decoration: underline;
+	color: black;
+}
